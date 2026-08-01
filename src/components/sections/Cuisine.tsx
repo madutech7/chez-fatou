@@ -11,7 +11,7 @@ const menuItems = [
     name: "Thiof Grillé & Attieké",
     desc: "Thiof saisi à la braise, accompagné de son authentique attieké, marinade chermoula et sauce rougail.",
     price: "18 000",
-    image: "/images/menu/Thiof Grillé Attieké.webp",
+    image: "/images/Menu/Thiof Grillé Attieké.webp",
   },
   {
     id: "brochettes-lotte",
@@ -19,7 +19,7 @@ const menuItems = [
     name: "Brochettes de Lotte",
     desc: "Brochettes de lotte tendres et braisées, riz rouge traditionnel aux épices douces.",
     price: "16 000",
-    image: "/images/menu/Brochettes de Lotte.webp",
+    image: "/images/Menu/Brochettes de Lotte.webp",
   },
   {
     id: "cassolette-fruits-mer",
@@ -27,7 +27,7 @@ const menuItems = [
     name: "Cassolette de Fruits de Mer",
     desc: "Sélection de fruits de mer frais dans une sauce onctueuse au safran et herbes fraîches.",
     price: "19 000",
-    image: "/images/menu/Cassolette de Fruits de Mers.webp",
+    image: "/images/Menu/Cassolette de Fruits de Mers.webp",
   },
   {
     id: "american-breakfast",
@@ -35,7 +35,7 @@ const menuItems = [
     name: "American Breakfast Plate",
     desc: "L'incontournable petit-déjeuner américain avec œufs, bacon croustillant, saucisses et toasts.",
     price: "9 500",
-    image: "/images/menu/American Breakfast Plate.webp",
+    image: "/images/Menu/American Breakfast Plate.webp",
   },
   {
     id: "brunch-americain",
@@ -43,7 +43,7 @@ const menuItems = [
     name: "Brunch Américain",
     desc: "Formule brunch complète avec pancakes, sirop d'érable, œufs brouillés et fruits frais.",
     price: "12 000",
-    image: "/images/menu/Brunch Américain.webp",
+    image: "/images/Menu/Brunch Américain.webp",
   },
   {
     id: "fondant-chocolat",
@@ -51,7 +51,7 @@ const menuItems = [
     name: "Fondant Au Chocolat",
     desc: "Cœur coulant au chocolat noir intense, servi avec sa boule de glace vanille.",
     price: "6 000",
-    image: "/images/menu/Fondant Au Chocolat.webp",
+    image: "/images/Menu/Fondant Au Chocolat.webp",
   },
   {
     id: "tarte-pommes",
@@ -59,7 +59,7 @@ const menuItems = [
     name: "Tarte Aux Pommes",
     desc: "Tarte fine aux pommes caramélisées et sa pointe de cannelle.",
     price: "5 500",
-    image: "/images/menu/Tarte Aux Pommes.webp",
+    image: "/images/Menu/Tarte Aux Pommes.webp",
   },
   {
     id: "jus-bissap",
@@ -67,7 +67,7 @@ const menuItems = [
     name: "Jus de Bissap",
     desc: "Fleur d'hibiscus infusée à la menthe fraîche, sucrée délicatement. Le classique sénégalais.",
     price: "3 000",
-    image: "/images/menu/Jus de Bissap.webp",
+    image: "/images/Menu/Jus de Bissap.webp",
   },
   {
     id: "virgin-mojito",
@@ -75,7 +75,7 @@ const menuItems = [
     name: "Virgin Mojito Mangue",
     desc: "Menthe fraîche, citron vert, purée de mangue et eau gazeuse pour un rafraîchissement total.",
     price: "4 500",
-    image: "/images/menu/Virgin Mojito Mangue.webp",
+    image: "/images/Menu/Virgin Mojito Mangue.webp",
   },
   {
     id: "chemin-sables",
@@ -83,7 +83,7 @@ const menuItems = [
     name: "Chemin de Sables Rosé",
     desc: "Un rosé léger et fruité, parfait pour accompagner les grillades et fruits de mer face à l'océan.",
     price: "24 000",
-    image: "/images/menu/Chemin de Sables Rosé.webp",
+    image: "/images/Menu/Chemin de Sables Rosé.webp",
   },
   {
     id: "vino-rose",
@@ -91,7 +91,7 @@ const menuItems = [
     name: "Domaine de Caylus",
     desc: "Vin rosé élégant aux notes d'agrumes, idéal pour sublimer votre expérience culinaire.",
     price: "28 000",
-    image: "/images/menu/Vino Rosé Domaine de Caylus.webp",
+    image: "/images/Menu/Vino Rosé Domaine de Caylus.webp",
   },
 ];
 
