@@ -1,26 +1,212 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Logo & Environment Colors */
+    --logo-charcoal: #58595b;
+    --logo-teal: #5ea191;
+    --sand: #f5eedc;
+    --ocean-light: #e8f4f1;
+    
+    /* Theme Colors */
+    --night: var(--logo-charcoal); /* Text color */
+    --night-70: rgba(88, 89, 91, 0.7);
+    --night-90: rgba(88, 89, 91, 0.9);
+    
+    --linen: #ffffff; /* Bright white background */
+    --linen-60: rgba(255, 255, 255, 0.6);
+    --linen-35: rgba(255, 255, 255, 0.35);
+    --linen-15: rgba(255, 255, 255, 0.15);
+    
+    --teal: var(--logo-teal);
+    --teal-line: rgba(94, 161, 145, 0.3);
+    
+    --ember: #d4a373;
+
+    --serif: 'Cormorant Garamond', serif;
+    --sans: 'Inter', sans-serif;
+    --mono: 'DM Mono', monospace;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Reset ─────────────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+html, body {
+  background-color: var(--linen);
+  color: var(--night);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* ── Typography ────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
+  font-weight: 300;
+  margin: 0;
+}
+
+/* "Zorozoro" Patterns - West African inspired decorative background touches */
+.bg-pattern-dots {
+  background-image: radial-gradient(var(--teal-line) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-pattern-lines {
+  background-image: repeating-linear-gradient(45deg, var(--linen-15) 0, var(--linen-15) 1px, transparent 1px, transparent 12px);
+}
+
+.bg-pattern-waves {
+  background-image: radial-gradient(circle at 100% 150%, var(--teal-line) 24%, transparent 24%, transparent 28%, var(--teal-line) 28%, var(--teal-line) 36%, transparent 36%, transparent 40%, transparent 40%, transparent),
+                    radial-gradient(circle at 0 150%, var(--teal-line) 24%, transparent 24%, transparent 28%, var(--teal-line) 28%, var(--teal-line) 36%, transparent 36%, transparent 40%, transparent 40%, transparent);
+  background-size: 60px 30px;
+}
+
+/* ── Utilities ─────────────────────────────────────────────────────────── */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+}
+.eyebrow::before,
+.eyebrow::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--teal);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--night);
+  color: var(--linen);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px 32px;
+  text-decoration: none;
+  border: 1px solid var(--night);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-primary:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--night);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px 32px;
+  text-decoration: none;
+  border: 1px solid var(--night-70);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-ghost:hover {
+  background: var(--night);
+  color: var(--linen);
+}
+
+/* Form Fields */
+.field {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+}
+.field input, .field select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--night-70);
+  padding: 16px 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  color: var(--night);
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.4s;
+}
+.field input::placeholder {
+  color: transparent; /* hide placeholder for floating label */
+}
+.field input:focus, .field select:focus {
+  border-bottom-color: var(--teal);
+}
+.field-label {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--night-70);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+.field input:focus ~ .field-label,
+.field input:not(:placeholder-shown) ~ .field-label,
+.field select:focus ~ .field-label,
+.field select:valid ~ .field-label,
+.field.is-filled .field-label {
+  top: -12px;
+  font-size: 10px;
+  color: var(--teal);
+}
+
+/* Image Softness */
+.img-soft {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Marquee Animation */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
