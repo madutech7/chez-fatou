@@ -32,7 +32,7 @@ export default function VirtualTour() {
             position: "relative",
             width: "100%",
             aspectRatio: "16/9",
-            minHeight: "520px",
+            minHeight: "clamp(280px, 45vh, 520px)",
             overflow: "hidden",
           }}
         >

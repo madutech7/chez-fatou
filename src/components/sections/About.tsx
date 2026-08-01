@@ -212,10 +212,16 @@ export default function About() {
               "cta"
               "img3";
             grid-template-columns: 1fr;
-            grid-auto-rows: 250px;
+            grid-auto-rows: minmax(200px, auto);
           }
-          .bento-text-main { grid-row: span 2; }
-          .bento-grid > div { grid-area: auto !important; }
+          .bento-text-main {
+            grid-row: auto !important;
+            padding: 32px 24px !important;
+          }
+          .bento-grid > div {
+            grid-area: auto !important;
+            min-height: 200px;
+          }
         }
       `}</style>
     </section>

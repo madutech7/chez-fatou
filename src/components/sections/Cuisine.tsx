@@ -116,6 +116,7 @@ function MenuItem({
   return (
     <div
       ref={ref}
+      className="menu-item-wrapper"
       style={{
         padding: "12vh 0",
         opacity: inView ? 1 : 0.3,
@@ -147,6 +148,15 @@ function MenuItem({
       >
         {item.name}
       </h3>
+      <div className="mobile-menu-img">
+        <Image
+          src={item.image}
+          alt={item.name}
+          fill
+          style={{ objectFit: "cover" }}
+          sizes="100vw"
+        />
+      </div>
       <p
         style={{
           fontFamily: "var(--sans)",
@@ -300,10 +310,23 @@ export default function Cuisine() {
       </div>
 
       <style>{`
+        .mobile-menu-img {
+          display: none;
+        }
         @media (max-width: 900px) {
+          .mobile-menu-img {
+            display: block;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/10;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 16px 0 24px;
+          }
           .cuisine-layout { grid-template-columns: 1fr !important; }
-          .cuisine-img-col { height: 60vh !important; position: sticky !important; top: 0; z-index: 0; }
-          .cuisine-text-col { position: relative; z-index: 10; background: var(--linen); padding-top: 80px !important; }
+          .cuisine-img-col { display: none !important; }
+          .cuisine-text-col { position: relative; z-index: 10; background: var(--linen); padding-top: 40px !important; }
+          .menu-item-wrapper { padding: 40px 0 !important; opacity: 1 !important; }
         }
       `}</style>
     </section>
