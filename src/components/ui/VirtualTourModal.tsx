@@ -69,7 +69,6 @@ export default function VirtualTourModal({ isOpen, onClose }: VirtualTourModalPr
               onClick={onClose}
               style={{
                 background: "none",
-                border: "none",
                 color: "#ffffff",
                 fontFamily: "var(--sans)",
                 fontSize: "14px",
