@@ -121,7 +121,7 @@ export default function About() {
           </motion.div>
 
           {/* Card 4: Teal CTA Box */}
-          <motion.div
+          <motion.a
             custom={3}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
@@ -140,14 +140,13 @@ export default function About() {
               textAlign: "center",
               textDecoration: "none",
             }}
-            as="a"
             href="#reservation"
           >
             <span style={{ fontFamily: "var(--serif)", fontSize: "32px", marginBottom: "16px" }}>Réserver</span>
             <span style={{ fontFamily: "var(--mono)", fontSize: "12px", textTransform: "uppercase", letterSpacing: "0.1em" }}>
               Votre Table
             </span>
-          </motion.div>
+          </motion.a>
 
           {/* Card 5: Long Image */}
           <motion.div
